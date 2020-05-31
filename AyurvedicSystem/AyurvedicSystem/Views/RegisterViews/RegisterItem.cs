@@ -38,13 +38,14 @@ namespace AyurvedicSystem.RegisterViews
             String expMonth=dateTimePicker1.Value.ToString("MM");
             String expDate= dateTimePicker1.Value.Day.ToString();
             String supplier = comboBox1.SelectedItem.ToString();
+            String price = txtPrice.Text;
             if (itemId == "" || itemName == "" || itemCode == "" || uom == "" || expYear == "" || expMonth == "" || expDate == "" )
             {
                 MessageBox.Show("Please fill all the details");
             }
             else
             {
-                status = new Registrations().registerItem(itemId, itemCode, itemName, uom, user, expDate, expMonth, expYear, supplier);
+                status = new Registrations().registerItem(itemId, itemCode, itemName, uom, user, expDate, expMonth, expYear, supplier,price);
                 if (status == true)
                 {
 
@@ -52,6 +53,7 @@ namespace AyurvedicSystem.RegisterViews
                     txtItemName.Text = "";
                     txtItemCode.Text = "";
                     txtUom.Text = "";
+                    txtPrice.Text = "";
 
 
                     RegisterItem_Load(sender, e);
@@ -69,6 +71,7 @@ namespace AyurvedicSystem.RegisterViews
             txtItemName.Text = "";
             txtItemCode.Text = "";
             txtUom.Text = "";
+            txtPrice.Text = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

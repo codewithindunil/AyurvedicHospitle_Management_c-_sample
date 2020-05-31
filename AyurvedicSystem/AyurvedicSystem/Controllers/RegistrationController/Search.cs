@@ -153,5 +153,52 @@ namespace AyurvedicSystem.Controllers.RegistrationController
             }
             return itemDetails;
         }
+
+        public List<String> searchSuplieretails(String id)
+        {
+            int count = 0;
+            MySqlDataReader rd;
+            MySqlConnection conn;
+            string connetionString = null;
+            connetionString = "server='" + serverName + "';database=ayurvedicsystem;uid='" + serveruser + "';pwd='" + serverPassword + "';";
+            conn = new MySqlConnection(connetionString);
+            String query;
+            List<String> suplierDetails = new List<string>();
+
+            query = "select * from suppliers where suplier_id = '" + id + "' ";
+
+            try
+            {
+                conn.Open();
+                MySqlCommand command = new MySqlCommand(query, conn);
+                rd = command.ExecuteReader();
+                while (rd.Read())
+                {
+                    count = count + 1;
+
+
+                    suplierDetails.Add(rd["suplier_id"].ToString());
+                    suplierDetails.Add(rd["suplier_name"].ToString());
+                    suplierDetails.Add(rd["adress_line_1"].ToString());
+                    suplierDetails.Add(rd["adress_line_2"].ToString());
+                    suplierDetails.Add(rd["adress_line_3"].ToString());
+                    suplierDetails.Add(rd["contact_person"].ToString());
+                    suplierDetails.Add(rd["mobile_no"].ToString());
+                    suplierDetails.Add(rd["email"].ToString());
+                    suplierDetails.Add(rd["created_by"].ToString());
+
+                }
+                if (count < 1)
+                {
+                    MessageBox.Show("not a valid id");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return suplierDetails;
+        }
     }
 }

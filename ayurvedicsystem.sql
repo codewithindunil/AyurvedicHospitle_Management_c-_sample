@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2020 at 04:51 PM
+-- Generation Time: May 31, 2020 at 11:00 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -68,17 +68,19 @@ CREATE TABLE `medicine_items` (
   `expMonth` varchar(100) NOT NULL,
   `expYear` varchar(100) NOT NULL,
   `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `supplier_id` varchar(255) NOT NULL
+  `supplier_id` varchar(255) NOT NULL,
+  `selling_price` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `medicine_items`
 --
 
-INSERT INTO `medicine_items` (`id`, `item_id`, `item_code`, `item_name`, `uom`, `created_by`, `expDate`, `expMonth`, `expYear`, `create_date`, `supplier_id`) VALUES
-(0, 'dsa', 'sad', 'asd', 'das', 'asd', 'das', 'das', 'as', '2020-05-31 13:39:14', ''),
-(3, 'ITEM1', '1', 's', 's', '', '31', '05', '2020', '2020-05-31 14:47:03', ''),
-(4, 'ITEM4', '4', 'grd', 'hdhd', '', '31', '05', '2020', '2020-05-31 14:49:32', 'ad');
+INSERT INTO `medicine_items` (`id`, `item_id`, `item_code`, `item_name`, `uom`, `created_by`, `expDate`, `expMonth`, `expYear`, `create_date`, `supplier_id`, `selling_price`) VALUES
+(3, 'ITEM1', '1', 's', 's', '', '31', '05', '2020', '2020-05-31 14:47:03', '', ''),
+(4, 'ITEM4', '4', 'grd', 'hdhd', '', '31', '05', '2020', '2020-05-31 14:49:32', 'ad', ''),
+(5, 'ITEM5', '5', 'sad', 'adasd', '', '31', '05', '2020', '2020-05-31 16:15:14', 'ad', '1111'),
+(6, 'ITEM6', '6', 'dasdas', '1', '', '31', '05', '2020', '2020-05-31 16:16:53', 'ad', '123');
 
 -- --------------------------------------------------------
 
@@ -107,6 +109,35 @@ CREATE TABLE `patientdetails` (
 
 INSERT INTO `patientdetails` (`id`, `patient_id`, `patient_name`, `address_line_1`, `address_line_2`, `address_line_3`, `age`, `sex`, `mobile`, `email`, `created_by`, `timestamp`) VALUES
 (0, 'sdf', 'sdf', 'sdf', 'sdf', 'sd', 'sdf', 'fsd', 'sd', 'sdf', 'sd', '2020-05-30 21:24:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shop`
+--
+
+CREATE TABLE `shop` (
+  `id` int(11) NOT NULL,
+  `order_no` varchar(255) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `item_code` varchar(255) NOT NULL,
+  `qty` varchar(255) NOT NULL,
+  `eachprice` varchar(255) NOT NULL,
+  `total` varchar(255) NOT NULL,
+  `patient_no` varchar(255) NOT NULL,
+  `customer_name` varchar(255) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `shop`
+--
+
+INSERT INTO `shop` (`id`, `order_no`, `item_name`, `item_code`, `qty`, `eachprice`, `total`, `patient_no`, `customer_name`, `date`) VALUES
+(1, 'OTHER7', 'dasdas', 'ITEM6', '2', '123', '246', '', 'indunil', '2020-05-31 20:36:06'),
+(2, 'OTHER7', 'dasdas', 'ITEM6', '2', '123', '246', '', 'indunil', '2020-05-31 20:36:10'),
+(3, 'OTHER3', 'dasdas', 'ITEM6', '2', '123', '246', '0', 'sdf', '2020-05-31 20:57:27'),
+(4, 'OTHER4', 'dasdas', 'ITEM6', '12', '123', '1476', '0', 'sdf', '2020-05-31 20:58:15');
 
 -- --------------------------------------------------------
 
@@ -182,6 +213,12 @@ ALTER TABLE `patientdetails`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `shop`
+--
+ALTER TABLE `shop`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `suppliers`
 --
 ALTER TABLE `suppliers`
@@ -207,13 +244,19 @@ ALTER TABLE `doctordetails`
 -- AUTO_INCREMENT for table `medicine_items`
 --
 ALTER TABLE `medicine_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `patientdetails`
 --
 ALTER TABLE `patientdetails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `shop`
+--
+ALTER TABLE `shop`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `suppliers`

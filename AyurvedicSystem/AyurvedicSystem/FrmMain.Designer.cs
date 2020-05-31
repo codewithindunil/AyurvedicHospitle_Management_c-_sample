@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuTileButton6 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton4 = new Bunifu.Framework.UI.BunifuTileButton();
             this.lblUser = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -40,8 +41,6 @@
             this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuTileButton5 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton6 = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +64,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.bunifuTileButton6);
-            this.panel1.Controls.Add(this.bunifuTileButton5);
             this.panel1.Controls.Add(this.bunifuCustomLabel2);
             this.panel1.Controls.Add(this.bunifuThinButton21);
             this.panel1.Controls.Add(this.bunifuTileButton4);
@@ -79,6 +77,26 @@
             this.panel1.Size = new System.Drawing.Size(1280, 120);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // bunifuTileButton6
+            // 
+            this.bunifuTileButton6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTileButton6.color = System.Drawing.Color.Transparent;
+            this.bunifuTileButton6.colorActive = System.Drawing.Color.Blue;
+            this.bunifuTileButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTileButton6.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bunifuTileButton6.ForeColor = System.Drawing.Color.White;
+            this.bunifuTileButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton6.Image")));
+            this.bunifuTileButton6.ImagePosition = 20;
+            this.bunifuTileButton6.ImageZoom = 50;
+            this.bunifuTileButton6.LabelPosition = 41;
+            this.bunifuTileButton6.LabelText = "TREATMENTS";
+            this.bunifuTileButton6.Location = new System.Drawing.Point(716, 11);
+            this.bunifuTileButton6.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuTileButton6.Name = "bunifuTileButton6";
+            this.bunifuTileButton6.Size = new System.Drawing.Size(104, 99);
+            this.bunifuTileButton6.TabIndex = 13;
+            this.bunifuTileButton6.Click += new System.EventHandler(this.bunifuTileButton6_Click);
             // 
             // bunifuThinButton21
             // 
@@ -203,45 +221,6 @@
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // bunifuTileButton5
-            // 
-            this.bunifuTileButton5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTileButton5.color = System.Drawing.Color.Transparent;
-            this.bunifuTileButton5.colorActive = System.Drawing.Color.Blue;
-            this.bunifuTileButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton5.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton5.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton5.Image")));
-            this.bunifuTileButton5.ImagePosition = 20;
-            this.bunifuTileButton5.ImageZoom = 50;
-            this.bunifuTileButton5.LabelPosition = 41;
-            this.bunifuTileButton5.LabelText = "ADMIN";
-            this.bunifuTileButton5.Location = new System.Drawing.Point(988, 11);
-            this.bunifuTileButton5.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton5.Name = "bunifuTileButton5";
-            this.bunifuTileButton5.Size = new System.Drawing.Size(104, 99);
-            this.bunifuTileButton5.TabIndex = 12;
-            // 
-            // bunifuTileButton6
-            // 
-            this.bunifuTileButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTileButton6.color = System.Drawing.Color.Transparent;
-            this.bunifuTileButton6.colorActive = System.Drawing.Color.Blue;
-            this.bunifuTileButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton6.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton6.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton6.Image")));
-            this.bunifuTileButton6.ImagePosition = 20;
-            this.bunifuTileButton6.ImageZoom = 50;
-            this.bunifuTileButton6.LabelPosition = 41;
-            this.bunifuTileButton6.LabelText = "TREATMENTS";
-            this.bunifuTileButton6.Location = new System.Drawing.Point(716, 11);
-            this.bunifuTileButton6.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton6.Name = "bunifuTileButton6";
-            this.bunifuTileButton6.Size = new System.Drawing.Size(104, 99);
-            this.bunifuTileButton6.TabIndex = 13;
-            this.bunifuTileButton6.Click += new System.EventHandler(this.bunifuTileButton6_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,6 +251,5 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton6;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton5;
     }
 }

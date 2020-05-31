@@ -80,7 +80,7 @@ namespace AyurvedicSystem.Controllers.RegistrationController
             return status;
         }
 
-        public bool registerSupplier(String supId, String supName, String adr1, String adr2, String adr3, String type, String mobile, String email, String createdBy)
+        public bool registerSupplier(String supId, String supName, String adr1, String adr2, String adr3, String contactPerson, String mobile, String email, String createdBy)
         {
             MySqlDataReader rd;
             MySqlConnection conn;
@@ -89,7 +89,7 @@ namespace AyurvedicSystem.Controllers.RegistrationController
             conn = new MySqlConnection(connetionString);
             String query;
             query = "insert into ayurvedicsystem.suppliers ( `suplier_id`, `suplier_name`, `adress_line_1`, `adress_line_2`, `adress_line_3`, `contact_person`, `mobile_no`, `email`, `created_by` ) values" +
-                " ('" + supId + "','" + supName.ToUpper() + "','" + adr1 + "','" + adr2.ToUpper() + "','" + adr3.ToUpper() + "','"+type.ToUpper()+"','" + mobile + "','" + email + "','" + createdBy.ToUpper() + "')";
+                " ('" + supId + "','" + supName.ToUpper() + "','" + adr1 + "','" + adr2.ToUpper() + "','" + adr3.ToUpper() + "','"+contactPerson.ToUpper()+"','" + mobile + "','" + email + "','" + createdBy.ToUpper() + "')";
 
 
             MySqlCommand command = new MySqlCommand(query, conn);
@@ -99,7 +99,7 @@ namespace AyurvedicSystem.Controllers.RegistrationController
                 conn.Open();
                 rd = command.ExecuteReader();
                 conn.Close();
-                MessageBox.Show("Patient added sussefully ...");
+                MessageBox.Show("Supplier added sussefully ...");
                 status = true;
             }
 
@@ -113,7 +113,7 @@ namespace AyurvedicSystem.Controllers.RegistrationController
         }
 
 
-        public bool registerItem(String itemId,String itemCode,String itemName,String uom,String createdBy,String expDate,String expMonth,String expYear,String supplier)
+        public bool registerItem(String itemId,String itemCode,String itemName,String uom,String createdBy,String expDate,String expMonth,String expYear,String supplier,String price)
         {
             MySqlDataReader rd;
             MySqlConnection conn;
@@ -121,8 +121,8 @@ namespace AyurvedicSystem.Controllers.RegistrationController
             connetionString = "server='" + serverName + "';database=ayurvedicsystem;uid='" + serveruser + "';pwd='" + serverPassword + "';";
             conn = new MySqlConnection(connetionString);
             String query;
-            query = "insert into ayurvedicsystem.medicine_items ( `item_id`, `item_code`, `item_name`, `uom`, `created_by`, `expDate`, `expMonth`, `expYear`, `supplier_id` ) values" +
-                " ('" + itemId + "','" + itemCode + "','" + itemName + "','" + uom + "','" + createdBy + "','" +expDate + "','" + expMonth + "','" + expYear + "','"+supplier+"')";
+            query = "insert into ayurvedicsystem.medicine_items ( `item_id`, `item_code`, `item_name`, `uom`, `created_by`, `expDate`, `expMonth`, `expYear`, `supplier_id`,`selling_price` ) values" +
+                " ('" + itemId + "','" + itemCode + "','" + itemName + "','" + uom + "','" + createdBy + "','" +expDate + "','" + expMonth + "','" + expYear + "','"+supplier+"','"+price+"')";
 
 
             MySqlCommand command = new MySqlCommand(query, conn);
@@ -132,7 +132,7 @@ namespace AyurvedicSystem.Controllers.RegistrationController
                 conn.Open();
                 rd = command.ExecuteReader();
                 conn.Close();
-                MessageBox.Show("Patient added sussefully ...");
+                MessageBox.Show("Item added sussefully ...");
                 status = true;
             }
 

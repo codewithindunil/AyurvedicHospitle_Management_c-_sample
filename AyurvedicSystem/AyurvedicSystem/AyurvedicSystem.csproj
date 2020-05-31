@@ -100,12 +100,7 @@
     <Compile Include="Controllers\RegistrationController\Generalprocess.cs" />
     <Compile Include="Controllers\RegistrationController\Registrations.cs" />
     <Compile Include="Controllers\RegistrationController\Search.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\ShopController\Shop.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +301,7 @@
     <EmbeddedResource Include="Views\Treatments\TteatmentsMain.resx">
       <DependentUpon>TteatmentsMain.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

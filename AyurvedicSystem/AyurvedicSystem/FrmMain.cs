@@ -22,7 +22,9 @@ namespace AyurvedicSystem
         {
             this.user = user;
             this.privilages = privilages;
+
             InitializeComponent();
+            lblUser.Text = user;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -46,6 +46,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtPrice = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -252,10 +254,38 @@
             this.comboBox1.TabIndex = 103;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(512, 267);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(37, 13);
+            this.bunifuCustomLabel5.TabIndex = 105;
+            this.bunifuCustomLabel5.Text = "Price :";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtPrice.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtPrice.BorderThickness = 3;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.isPassword = false;
+            this.txtPrice.Location = new System.Drawing.Point(660, 254);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(232, 41);
+            this.txtPrice.TabIndex = 104;
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // RegisterItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuCustomLabel5);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.dateTimePicker1);
@@ -297,5 +327,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtPrice;
     }
 }

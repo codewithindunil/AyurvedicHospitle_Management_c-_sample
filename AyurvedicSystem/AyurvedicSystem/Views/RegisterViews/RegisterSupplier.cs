@@ -29,18 +29,18 @@ namespace AyurvedicSystem.RegisterViews
             String adr2 = txtAdressLine2.Text;
             String adr3 = txtAdressLine3.Text;
        
-            String type = txtType.Text;
+            String contatc_perosn = txtType.Text;
             String mobile = txtMobile.Text;
             String email = txtEmail.Text;
             String createdBy = user;
 
-            if (supId == "" || supName == "" || adr1 == "" || adr2 == "" || adr3 == "" ||  type == "" || mobile == "" || email == "")
+            if (supId == "" || supName == "" || adr1 == "" || adr2 == "" || adr3 == "" || contatc_perosn == "" || mobile == "" || email == "")
             { 
                 MessageBox.Show("Please fill all the details");
             }
             else
             {
-                status = new Registrations().registerSupplier(supId, supName, adr1, adr2, adr3,  type,  mobile, email, createdBy);
+                status = new Registrations().registerSupplier(supId, supName, adr1, adr2, adr3,  contatc_perosn,  mobile, email, createdBy);
                 if (status == true)
                 {
 

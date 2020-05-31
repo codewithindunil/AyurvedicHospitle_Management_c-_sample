@@ -71,9 +71,9 @@
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.Location = new System.Drawing.Point(537, 145);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(37, 13);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(86, 13);
             this.bunifuCustomLabel7.TabIndex = 97;
-            this.bunifuCustomLabel7.Text = "Type :";
+            this.bunifuCustomLabel7.Text = "Contact Person :";
             this.bunifuCustomLabel7.Click += new System.EventHandler(this.bunifuCustomLabel7_Click);
             // 
             // bunifuCustomLabel8
