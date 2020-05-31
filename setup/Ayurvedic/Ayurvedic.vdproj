@@ -892,12 +892,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A4A997124740D616BC43A29C7078BB4C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E9217FD4AC3D4EDFBF2E1C307B32E97C"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1627,6 +1621,12 @@
         "OwnerKey" = "8:_3853C9BD100302549E053F901EC575B3"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A4A997124740D616BC43A29C7078BB4C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -1645,6 +1645,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -1661,6 +1669,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -5615,7 +5631,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_FFBCE5C5E2B642C38D1A4B26494D4611"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder][madhushani]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -5764,7 +5780,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3B0827E04730477DB09CDFC750D1BD30"
             {
-            "Name" = "8:Shortcut to Primary output from AyurvedicSystem (Active)"
+            "Name" = "8:AMS"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -5778,7 +5794,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6582A84878864483B924B9E339674581"
             {
-            "Name" = "8:Shortcut to Primary output from AyurvedicSystem (Active)"
+            "Name" = "8:AMS"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
