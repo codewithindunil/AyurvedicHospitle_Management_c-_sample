@@ -12,14 +12,16 @@ namespace AyurvedicSystem.Treatments
 {
     public partial class TteatmentsMain : UserControl
     {
-        public TteatmentsMain()
+        String user;
+        public TteatmentsMain(String user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            TreatmentsNew item = new TreatmentsNew();
+            TreatmentsNew item = new TreatmentsNew(user);
             panel1.Controls.Clear();
             //item.Top = 10;
             //item.Left = 10;
@@ -28,7 +30,7 @@ namespace AyurvedicSystem.Treatments
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            TreatmentsExisting item = new TreatmentsExisting();
+            TreatmentsExisting item = new TreatmentsExisting(user);
             panel1.Controls.Clear();
             //item.Top = 10;
             //item.Left = 10;

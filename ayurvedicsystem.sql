@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2020 at 11:00 PM
+-- Generation Time: Jun 06, 2020 at 11:03 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -137,7 +137,13 @@ INSERT INTO `shop` (`id`, `order_no`, `item_name`, `item_code`, `qty`, `eachpric
 (1, 'OTHER7', 'dasdas', 'ITEM6', '2', '123', '246', '', 'indunil', '2020-05-31 20:36:06'),
 (2, 'OTHER7', 'dasdas', 'ITEM6', '2', '123', '246', '', 'indunil', '2020-05-31 20:36:10'),
 (3, 'OTHER3', 'dasdas', 'ITEM6', '2', '123', '246', '0', 'sdf', '2020-05-31 20:57:27'),
-(4, 'OTHER4', 'dasdas', 'ITEM6', '12', '123', '1476', '0', 'sdf', '2020-05-31 20:58:15');
+(4, 'OTHER4', 'dasdas', 'ITEM6', '12', '123', '1476', '0', 'sdf', '2020-05-31 20:58:15'),
+(5, 'OTHER5', 'sad', 'ITEM5', '4', '1111', '4444', 'sdf', 'sdf', '2020-06-03 06:46:01'),
+(6, 'OTHER6', 'dasdas', 'ITEM6', '2', '123', '246', 'sdf', 'sdf', '2020-06-05 19:52:06'),
+(7, 'OTHER7', 'sad', 'ITEM5', '2', '1111', '2222', 'sdf', 'sdf', '2020-06-06 08:49:15'),
+(8, 'OTHER7', 'dasdas', 'ITEM6', '1', '123', '123', 'sdf', 'sdf', '2020-06-06 08:49:23'),
+(9, 'OTHER9', 'dasdas', 'ITEM6', '23', '123', '2829', '', 'sasafsa', '2020-06-06 09:00:14'),
+(10, 'OTHER10', 'dasdas', 'ITEM6', '1', '123', '123', 'sdf', 'sdf', '2020-06-06 09:02:01');
 
 -- --------------------------------------------------------
 
@@ -164,7 +170,35 @@ CREATE TABLE `suppliers` (
 --
 
 INSERT INTO `suppliers` (`id`, `suplier_id`, `suplier_name`, `adress_line_1`, `adress_line_2`, `adress_line_3`, `contact_person`, `mobile_no`, `email`, `created_by`, `created_date`) VALUES
-(1, 'ad', 'asd', 'asd', 'as', 'asd', 'asd', 'ad', 'ad', 'ad', '2020-05-31 13:16:21');
+(1, 'ad', 'asd', 'asd', 'as', 'asd', 'asd', 'ad', 'ad', 'ad', '2020-05-31 13:16:21'),
+(2, 'SUP2', 'ADSA', 'sadsa', 'ASDSA', 'ASDSA', 'ASDAS', 'asdas', 'dasd', 'TEST', '2020-06-05 15:07:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `treatments`
+--
+
+CREATE TABLE `treatments` (
+  `id` int(11) NOT NULL,
+  `seq_id` varchar(255) NOT NULL,
+  `patient_id` varchar(255) NOT NULL,
+  `doctor_id` varchar(255) NOT NULL,
+  `treatment_type` varchar(255) NOT NULL,
+  `other_treatment` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `mr_issue_date` varchar(255) NOT NULL,
+  `created_by` varchar(255) NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `treatments`
+--
+
+INSERT INTO `treatments` (`id`, `seq_id`, `patient_id`, `doctor_id`, `treatment_type`, `other_treatment`, `description`, `mr_issue_date`, `created_by`, `date`) VALUES
+(0, 'das', 'das', 'ad', 'das', 'ad', 'asd', 'das', 'das', '2020-06-06 13:51:20'),
+(2, 'T1', 'sdf', 'das', 'sfdsfd', 'fdsfds', 'fsdfsdfdsf', '6/6/2020 1:51:47 PM', 'test', '2020-06-06 13:51:47');
 
 -- --------------------------------------------------------
 
@@ -188,7 +222,8 @@ INSERT INTO `users` (`id`, `name`, `uname`, `pword`, `privilages`) VALUES
 (1, 'test', 't', 't', '1'),
 (2, 'guest', 'g', 'g', '2'),
 (3, 'ABC', 'ABC', 'ABC', '4'),
-(4, 'AD', 'ASDA', 'ggg', 'p');
+(4, 'AD', 'ASDA', 'ggg', 'p'),
+(5, 'INDUNIL', 'I', 'I', '1');
 
 --
 -- Indexes for dumped tables
@@ -225,6 +260,12 @@ ALTER TABLE `suppliers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `treatments`
+--
+ALTER TABLE `treatments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -238,7 +279,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `doctordetails`
 --
 ALTER TABLE `doctordetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `medicine_items`
@@ -250,25 +291,31 @@ ALTER TABLE `medicine_items`
 -- AUTO_INCREMENT for table `patientdetails`
 --
 ALTER TABLE `patientdetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `shop`
 --
 ALTER TABLE `shop`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `suppliers`
 --
 ALTER TABLE `suppliers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `treatments`
+--
+ALTER TABLE `treatments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

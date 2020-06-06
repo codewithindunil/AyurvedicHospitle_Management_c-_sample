@@ -35,7 +35,6 @@
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtAdressLine1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnVoucher = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnClear = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtAdressLine3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtAdressLine2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -138,31 +137,6 @@
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(87, 13);
             this.bunifuCustomLabel10.TabIndex = 40;
             this.bunifuCustomLabel10.Text = "Employer Name :";
-            // 
-            // btnVoucher
-            // 
-            this.btnVoucher.ActiveBorderThickness = 1;
-            this.btnVoucher.ActiveCornerRadius = 20;
-            this.btnVoucher.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnVoucher.ActiveForecolor = System.Drawing.Color.White;
-            this.btnVoucher.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnVoucher.BackColor = System.Drawing.SystemColors.Control;
-            this.btnVoucher.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoucher.BackgroundImage")));
-            this.btnVoucher.ButtonText = "VOUCHER";
-            this.btnVoucher.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoucher.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoucher.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnVoucher.IdleBorderThickness = 1;
-            this.btnVoucher.IdleCornerRadius = 20;
-            this.btnVoucher.IdleFillColor = System.Drawing.Color.White;
-            this.btnVoucher.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnVoucher.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnVoucher.Location = new System.Drawing.Point(805, 517);
-            this.btnVoucher.Margin = new System.Windows.Forms.Padding(5);
-            this.btnVoucher.Name = "btnVoucher";
-            this.btnVoucher.Size = new System.Drawing.Size(181, 41);
-            this.btnVoucher.TabIndex = 37;
-            this.btnVoucher.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnClear
             // 
@@ -445,7 +419,6 @@
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.txtAdressLine1);
             this.Controls.Add(this.bunifuCustomLabel10);
-            this.Controls.Add(this.btnVoucher);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtAdressLine3);
             this.Controls.Add(this.txtAdressLine2);
@@ -469,7 +442,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtAdressLine1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnVoucher;
         private Bunifu.Framework.UI.BunifuThinButton2 btnClear;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtAdressLine3;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtAdressLine2;

@@ -224,5 +224,11 @@ namespace AyurvedicSystem.ShopViews
             txtTotal.Text = (Double.Parse(txtQty.Text) * Double.Parse(txtEachPrice.Text)).ToString();
 
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            Double total = new Shop().pay(txtOrderNo.Text);
+            new FrmTotal(total.ToString(), txtOrderNo.Text).Show();
+        }
     }
 }

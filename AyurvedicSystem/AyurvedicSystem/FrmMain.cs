@@ -72,7 +72,7 @@ namespace AyurvedicSystem
 
         private void bunifuTileButton6_Click(object sender, EventArgs e)
         {
-            TteatmentsMain  item = new TteatmentsMain();
+            TteatmentsMain  item = new TteatmentsMain(user);
             panel2.Controls.Clear();
             //item.Top = 10;
             //item.Left = 10;
@@ -106,6 +106,25 @@ namespace AyurvedicSystem
             {
                 // Do something  
             }
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDay.Text = DateTime.Now.ToString("dddd");
+
+            lblSecond.Location = new Point(lblTime.Location.X + lblTime.Width - 5, lblSecond.Location.Y);
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
 
         private void bunifuTileButton3_Click(object sender, EventArgs e)

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AyurvedicSystem.Controllers.ShopController
 {
@@ -45,6 +46,39 @@ namespace AyurvedicSystem.Controllers.ShopController
             }
 
             return count;
+        }
+
+        public Double pay(String order_no)
+        {
+            Double total = 0;
+            MySqlDataReader rd;
+            MySqlConnection conn;
+            string connetionString = null;
+            connetionString = "server='" + serverName + "';database=ayurvedicsystem;uid='" + serveruser + "';pwd='" + serverPassword + "';";
+            conn = new MySqlConnection(connetionString);
+            String query;
+            List<String> suplierDetails = new List<string>();
+
+            query = "select * from shop where order_no = '" + order_no + "' ";
+
+            try
+            {
+                conn.Open();
+                MySqlCommand command = new MySqlCommand(query, conn);
+                rd = command.ExecuteReader();
+                while (rd.Read())
+                {
+                    total = total + Double.Parse(rd["total"].ToString());
+
+                }
+               
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return total;
         }
 
     }

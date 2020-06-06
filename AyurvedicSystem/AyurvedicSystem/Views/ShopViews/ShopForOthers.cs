@@ -146,7 +146,8 @@ namespace AyurvedicSystem.ShopViews
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-          
+            Double total = new Shop().pay(txtOrderNo.Text);
+            new FrmTotal(total.ToString(),txtOrderNo.Text).Show();
         }
 
         private void txtOrderNo_OnValueChanged(object sender, EventArgs e)

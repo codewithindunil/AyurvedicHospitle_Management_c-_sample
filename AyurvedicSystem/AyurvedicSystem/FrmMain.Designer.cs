@@ -41,6 +41,10 @@
             this.bunifuTileButton2 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSecond = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblDay = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +67,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.lblDay);
+            this.panel1.Controls.Add(this.lblTime);
+            this.panel1.Controls.Add(this.lblSecond);
             this.panel1.Controls.Add(this.bunifuTileButton6);
             this.panel1.Controls.Add(this.bunifuCustomLabel2);
             this.panel1.Controls.Add(this.bunifuThinButton21);
@@ -71,10 +78,9 @@
             this.panel1.Controls.Add(this.bunifuTileButton3);
             this.panel1.Controls.Add(this.bunifuTileButton2);
             this.panel1.Controls.Add(this.bunifuTileButton1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 120);
+            this.panel1.Size = new System.Drawing.Size(1284, 120);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -221,6 +227,46 @@
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // lblSecond
+            // 
+            this.lblSecond.AutoSize = true;
+            this.lblSecond.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecond.ForeColor = System.Drawing.Color.White;
+            this.lblSecond.Location = new System.Drawing.Point(1094, 17);
+            this.lblSecond.Name = "lblSecond";
+            this.lblSecond.Size = new System.Drawing.Size(62, 44);
+            this.lblSecond.TabIndex = 3;
+            this.lblSecond.Text = "22";
+            // 
+            // lblTime
+            // 
+            this.lblTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(933, 6);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(155, 60);
+            this.lblTime.TabIndex = 2;
+            this.lblTime.Text = "22:22";
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblDay
+            // 
+            this.lblDay.AutoSize = true;
+            this.lblDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDay.ForeColor = System.Drawing.Color.White;
+            this.lblDay.Location = new System.Drawing.Point(933, 71);
+            this.lblDay.Name = "lblDay";
+            this.lblDay.Size = new System.Drawing.Size(207, 41);
+            this.lblDay.TabIndex = 14;
+            this.lblDay.Text = "SATURDAY";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +278,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -251,5 +298,9 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton6;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblSecond;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblDay;
     }
 }

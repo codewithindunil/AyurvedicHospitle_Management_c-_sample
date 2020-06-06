@@ -99,8 +99,9 @@
     <Compile Include="Controllers\AccessController\AccessCOntroller.cs" />
     <Compile Include="Controllers\RegistrationController\Generalprocess.cs" />
     <Compile Include="Controllers\RegistrationController\Registrations.cs" />
-    <Compile Include="Controllers\RegistrationController\Search.cs" />
+    <Compile Include="Controllers\SearchController\Search.cs" />
     <Compile Include="Controllers\ShopController\Shop.cs" />
+    <Compile Include="Controllers\TreatmentController\TreatmentControll.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +113,12 @@
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTotal.Designer.cs">
+      <DependentUpon>FrmTotal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,22 +218,22 @@
     <Compile Include="Views\ShopViews\ShopMain.Designer.cs">
       <DependentUpon>ShopMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Treatments\TreatmentsExisting.cs">
+    <Compile Include="Views\TreatmentsViews\TreatmentsExisting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Treatments\TreatmentsExisting.Designer.cs">
+    <Compile Include="Views\TreatmentsViews\TreatmentsExisting.Designer.cs">
       <DependentUpon>TreatmentsExisting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Treatments\TreatmentsNew.cs">
+    <Compile Include="Views\TreatmentsViews\TreatmentsHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Treatments\TreatmentsNew.Designer.cs">
-      <DependentUpon>TreatmentsNew.cs</DependentUpon>
+    <Compile Include="Views\TreatmentsViews\TreatmentsHistory.Designer.cs">
+      <DependentUpon>TreatmentsHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Treatments\TteatmentsMain.cs">
+    <Compile Include="Views\TreatmentsViews\TteatmentsMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Treatments\TteatmentsMain.Designer.cs">
+    <Compile Include="Views\TreatmentsViews\TteatmentsMain.Designer.cs">
       <DependentUpon>TteatmentsMain.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmLogin.resx">
@@ -234,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTotal.resx">
+      <DependentUpon>FrmTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,6 +253,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\AdminViews\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
@@ -292,13 +303,13 @@
     <EmbeddedResource Include="Views\ShopViews\ShopMain.resx">
       <DependentUpon>ShopMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Treatments\TreatmentsExisting.resx">
+    <EmbeddedResource Include="Views\TreatmentsViews\TreatmentsExisting.resx">
       <DependentUpon>TreatmentsExisting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Treatments\TreatmentsNew.resx">
-      <DependentUpon>TreatmentsNew.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TreatmentsViews\TreatmentsHistory.resx">
+      <DependentUpon>TreatmentsHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Treatments\TteatmentsMain.resx">
+    <EmbeddedResource Include="Views\TreatmentsViews\TteatmentsMain.resx">
       <DependentUpon>TteatmentsMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
@@ -315,6 +326,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayurvedic-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

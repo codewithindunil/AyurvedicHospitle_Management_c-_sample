@@ -25,7 +25,6 @@ D:\latha\AyurvedicSystem\AyurvedicSystem\bin\Debug\System.Buffers.xml
 D:\latha\AyurvedicSystem\AyurvedicSystem\bin\Debug\System.Memory.xml
 D:\latha\AyurvedicSystem\AyurvedicSystem\bin\Debug\System.Numerics.Vectors.xml
 D:\latha\AyurvedicSystem\AyurvedicSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.csprojAssemblyReference.cache
 D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\ledger_horana.frmLogin.resources
 D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.Properties.Resources.resources
 D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.RegisterMain.resources
@@ -53,3 +52,5 @@ D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.Treatments.Tr
 D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.Views.AdminViews.AddUser.resources
 D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.Views.AdminViews.AdminMain.resources
 D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.Views.AdminViews.ViewUser.resources
+D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.FrmTotal.resources
+D:\latha\AyurvedicSystem\AyurvedicSystem\obj\Debug\AyurvedicSystem.csprojAssemblyReference.cache

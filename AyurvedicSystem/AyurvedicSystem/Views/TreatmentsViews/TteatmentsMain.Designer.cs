@@ -55,7 +55,7 @@
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.Navy;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "EXISTING TREATMENT";
+            this.bunifuFlatButton2.ButtonText = "NEW TREATMENT";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
@@ -78,7 +78,7 @@
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(266, 70);
             this.bunifuFlatButton2.TabIndex = 9;
-            this.bunifuFlatButton2.Text = "EXISTING TREATMENT";
+            this.bunifuFlatButton2.Text = "NEW TREATMENT";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,7 +90,7 @@
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.Navy;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "NEW TREATMENT";
+            this.bunifuFlatButton1.ButtonText = "TREATMENTS HISTORY";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
@@ -113,7 +113,7 @@
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(266, 70);
             this.bunifuFlatButton1.TabIndex = 8;
-            this.bunifuFlatButton1.Text = "NEW TREATMENT";
+            this.bunifuFlatButton1.Text = "TREATMENTS HISTORY";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

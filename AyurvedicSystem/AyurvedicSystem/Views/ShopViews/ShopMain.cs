@@ -12,8 +12,10 @@ namespace AyurvedicSystem.ShopViews
 {
     public partial class ShopMain : UserControl
     {
+     
         public ShopMain()
         {
+            
             InitializeComponent();
         }
 
@@ -36,6 +38,11 @@ namespace AyurvedicSystem.ShopViews
         }
 
         private void ShopMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
